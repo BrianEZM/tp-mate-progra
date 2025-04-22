@@ -1,11 +1,41 @@
 def decimal_a_binario(numero):
-    return bin(numero).replace("0b","")
+    binario=""
+    while numero > 0:
+        binario= str(numero % 2) + binario
+        numero= numero // 2
+    return binario
 
 def decimal_a_octal(numero):
-    return oct(numero)[2:]
-            
+    octal=""
+    while numero > 0:
+        residuo= numero % 8
+        octal= str(residuo) + octal
+        numero=int(numero / 8)
+    return octal
+
+def obt_caracter(valor):
+    valor= str(valor)
+    equivalencias= {
+        "10":"a",
+        "11":"b",
+        "12":"c",
+        "13":"d",
+        "14":"e",
+        "15":"f",
+        }
+    if valor in equivalencias:
+        return equivalencias[valor]
+    else:
+        return valor
+               
 def decimal_a_hexadecimal(numero):
-    return hex(numero)[2:]
+    hexadecimal=""
+    while numero > 0:
+        residuo= numero % 16
+        caracter= obt_caracter(residuo)
+        hexadecimal=caracter + hexadecimal
+        numero= int(numero / 16)
+    return hexadecimal
                         
 numero=int(input("Ingrese un numero:"))
 
