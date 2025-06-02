@@ -73,7 +73,7 @@ while programa_on:
             print("Gracias por usar el convertidor!")
             programa_on = False
 
-        # Se valida que sea un numero octal valido, si lo es, se convierte a los de mas sistemas
+        # Se valida que sea un numero decimal valido, si lo es, se convierte a los de mas sistemas
         while True:
             if es_decimal(entrada_decimal):
                 octal = decimal_a_octal(int(entrada_decimal))
@@ -81,7 +81,7 @@ while programa_on:
                 hexadecimal = decimal_a_hexadecimal(int(entrada_decimal))
 
                 print("-" * 30)
-                print(f"Número octal: {entrada_decimal}")
+                print(f"Número decimal: {entrada_decimal}")
                 print(f"  - Octal:     {octal}")
                 print(f"  - Binario:     {binario}")
                 print(f"  - Hexadecimal: {hexadecimal}")
@@ -107,7 +107,7 @@ while programa_on:
             print("Gracias por usar el convertidor!")
             programa_on = False
 
-        # Se valida que sea un numero octal valido, si lo es, se convierte a los de mas sistemas
+        # Se valida que sea un numero hexadecimal valido, si lo es, se convierte a los de mas sistemas
         while True:
             if es_hexagonal(entrada_hexa.upper()):
                 decimal = conver_hexa_deci(entrada_hexa)
@@ -141,7 +141,7 @@ while programa_on:
             print("Gracias por usar el convertidor!")
             programa_on = False
 
-        # Se valida que sea un numero octal valido, si lo es, se convierte a los de mas sistemas
+        # Se valida que sea un numero binario valido, si lo es, se convierte a los de mas sistemas
         while True:
             if es_binario(entrada_binaria.upper()):
                 octal = binario_a_octal(entrada_binaria)
@@ -155,7 +155,7 @@ while programa_on:
                 print(f"  - Hexadecimal: {hexadecimal}")
                 print("-" * 30)
                 break
-            # Si no es un numero hexadecimal valido, se muestran mensajes explicativos
+            # Si no es un numero binario valido, se muestran mensajes explicativos
             else:
                 print("-" * 30)
                 print("Error! La entrada no es un número entero binario válido.")
