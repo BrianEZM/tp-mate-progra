@@ -42,11 +42,15 @@ concatenando los equivalentes
 
 
 def octal_a_binario(octal_str):
+    # Diccionario con equivalencias
     tabla_octal_bin = {
         '0': '000', '1': '001', '2': '010', '3': '011',
         '4': '100', '5': '101', '6': '110', '7': '111'
     }
+
+    # Valor a construir y retornar
     binario = ""
+
     if octal_str.startswith('-'):
         binario += '-'
         octal_str = octal_str[1:]
